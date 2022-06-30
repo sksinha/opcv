@@ -16,7 +16,7 @@ loc_button.js_on_event("button_click", CustomJS(code="""
     """))
 result = streamlit_bokeh_events(
     loc_button,
-    img_file_buffer = st.camera_input("Take a picture")
+    img_file_buffer = st.camera_input("Take a picture"),
     events="GET_LOCATION",
     key="get_location",
     refresh_on_update=False,
