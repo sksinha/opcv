@@ -22,3 +22,8 @@ result = streamlit_bokeh_events(
 if result:
     if "GET_LOCATION" in result:
         st.write(result.get("GET_LOCATION"))
+
+        
+#location = geolocator.reverse(Latitude+","+Longitude)
+location = geolocator.reverse(result.get("GET_LOCATION")
+
