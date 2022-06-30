@@ -1,13 +1,10 @@
-from streamlit_webrtc import webrtc_streamer
-import av
+import streamlit as st
 
+img_file_buffer = st.camera_input("Take a picture")
 
-def video_frame_callback(frame):
-    img = frame.to_ndarray(format="bgr24")
-
-    flipped = img[::-1,:,:]
-
-    return av.VideoFrame.from_ndarray(flipped, format="bgr24")
-
-
-webrtc_streamer(key="example", video_frame_callback=video_frame_callback)
+if img_file_buffer is not None:
+    # To read image file buffer as bytes:
+    bytes_data = img_file_buffer.getvalue()
+    # Check the type of bytes_data:
+    # Should output: <class 'bytes'>
+    st.write(type(bytes_data))
