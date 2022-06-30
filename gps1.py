@@ -25,5 +25,5 @@ if result:
 
         
 #location = geolocator.reverse(Latitude+","+Longitude)
-location = geolocator.reverse(result.get("GET_LOCATION")
+location = geolocator.reverse(result.get("GET_LOCATION"))
 
