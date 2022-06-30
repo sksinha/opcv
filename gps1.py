@@ -27,5 +27,9 @@ if result:
 
         
 #location = geolocator.reverse(Latitude+","+Longitude)
-location = geolocator.reverse(result.get("GET_LOCATION"))
+#Read Json file result.get("GET_LOCATION")
+import pandas as pd
+df = pd.read_json('result.get("GET_LOCATION"))
+df
+#location = geolocator.reverse(result.get("GET_LOCATION"))
 
