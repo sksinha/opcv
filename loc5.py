@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 #####
+import streamlit as st
 from bokeh.models.widgets import Button
 from bokeh.models import CustomJS
 from streamlit_bokeh_events import streamlit_bokeh_events
@@ -16,7 +17,6 @@ loc_button.js_on_event("button_click", CustomJS(code="""
     """))
 result = streamlit_bokeh_events(
     loc_button,
-    img_file_buffer = st.camera_input("Take a picture"),
     events="GET_LOCATION",
     key="get_location",
     refresh_on_update=False,
