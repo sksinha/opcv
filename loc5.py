@@ -33,7 +33,7 @@ if result:
 #print(y["lat"])
 y=pd.DataFrame(result)
 if y.shape[0]:
-    st.write(y)
+    st.write(y.info())
 lat=y.head(1)
 
 #lon=y.head(2)
