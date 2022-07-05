@@ -36,5 +36,5 @@ if y.shape[0]:
     st.write(y)
 lat=y.head(1)
 lon=y.head(2)
-map_data = y[["lat", "lon"]]
-st.map(map_data)  
+#map_data = y[[lat, lon]]
+st.map(lat,lon)  
