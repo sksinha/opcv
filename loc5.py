@@ -27,6 +27,8 @@ if result:
     if "GET_LOCATION" in result:
         st.write(result.get("GET_LOCATION"))
 ######
-import json
-y = json.loads(result)
-print(y["lat"])
+#import json
+#y = json.loads(result)
+#print(y["lat"])
+y=pd.DataFrame(result)
+st.write(y)
