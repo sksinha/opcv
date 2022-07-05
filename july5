@@ -13,7 +13,7 @@ loc_button.js_on_event("button_click", CustomJS(code="""
             document.dispatchEvent(new CustomEvent("GET_LOCATION", {detail: {lat: loc.coords.latitude, lon: loc.coords.longitude}}))
         }
     )
-    """))
+    """)
 result = streamlit_bokeh_events(
     loc_button,
     img_file_buffer = st.camera_input("Take a picture"),
