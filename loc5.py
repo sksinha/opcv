@@ -36,6 +36,7 @@ if y.shape[0]:
     st.write(y)
 lat=y.head(1)
 lon=y.head(2)
-st.write(lat,lon)
+lat = df.loc['lat', 'GET_LOCATION']
+st.write(lat)
 #map_data = y[[lat, lon]]
 st.map(lat,lon)  
