@@ -31,5 +31,6 @@ if result:
 #import json
 #y = json.loads(result)
 #print(y["lat"])
-if y=pd.DataFrame(result)
+y=pd.DataFrame(result)
+if y.count() 
     st.write(y)
