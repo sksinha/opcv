@@ -33,10 +33,11 @@ if result:
 #print(y["lat"])
 y=pd.DataFrame(result)
 if y.shape[0]:
-    st.write(y['GET_LOCATION'])
+    st.write(y)
 lat=y.head(1)
+
 #lon=y.head(2)
-lat = y.loc['lat', 'GET_LOCATION']
+#lat = y.loc['lat', 'GET_LOCATION']
 #st.write(lat)
 #map_data = y[[lat, lon]]
 #st.map(lat,lon)  
