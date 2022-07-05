@@ -27,4 +27,6 @@ if result:
     if "GET_LOCATION" in result:
         st.write(result.get("GET_LOCATION"))
 ######
-st.map(result)
+import json
+y = json.loads(result)
+print(y["lat"])
