@@ -34,5 +34,7 @@ if result:
 y=pd.DataFrame(result)
 if y.shape[0]:
     st.write(y)
+lat=y.iloc[0]
+lon=y.iloc[1]
 map_data = y[["lat", "lon"]]
 st.map(map_data)  
