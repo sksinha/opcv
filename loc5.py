@@ -34,3 +34,8 @@ if y.shape[0]:
   st.write( y[y.columns[y.columns.isin(['lat','hue','NON-EXISTANT COLUMN'])]])
   st.write(y)
 #st.write(y.values.tolist())
+from geopy.geocoders import Nominatim
+geolocator = Nominatim(user_agent="http")
+location = geolocator.reverse(result)
+
+st.write(location.address)
