@@ -28,16 +28,10 @@ if result:
     if "GET_LOCATION" in result:
         st.write(result.get("GET_LOCATION"))
 ######
-#import json
-#y = json.loads(result)
-#print(y["lat"])
-y=pd.DataFrame(result)
-if y.shape[0]:
-  st.write( y[y.columns[y.columns.isin(['lat','hue','NON-EXISTANT COLUMN'])]])
-lat=y.head(1)
 
-#lon=y.head(2)
-#lat = y.loc['lat', 'GET_LOCATION']
-#st.write(lat)
-#map_data = y[[lat, lon]]
-#st.map(lat,lon)  
+y=pd.DataFrame(result)
+#if y.shape[0]:
+  #st.write( y[y.columns[y.columns.isin(['lat','hue','NON-EXISTANT COLUMN'])]])
+#lat=y.head(1)
+st.write(y)
+st.write(y.values.tolist())
