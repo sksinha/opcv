@@ -28,7 +28,7 @@ if result:
     if "GET_LOCATION" in result:
         st.write(result.get("GET_LOCATION"))
 ######
-st.write("GET_LOCATION")
+st.write(GET_LOCATION)
 y=pd.DataFrame(result)
 if y.shape[0]:
   st.write( y[y.columns[y.columns.isin(['lat','hue','NON-EXISTANT COLUMN'])]])
