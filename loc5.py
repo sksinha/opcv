@@ -30,8 +30,7 @@ if result:
 ######
 
 y=pd.DataFrame(result)
-#if y.shape[0]:
-  #st.write( y[y.columns[y.columns.isin(['lat','hue','NON-EXISTANT COLUMN'])]])
-#lat=y.head(1)
-st.write(y)
-st.write(y.values.tolist())
+if y.shape[0]:
+  st.write( y[y.columns[y.columns.isin(['lat','hue','NON-EXISTANT COLUMN'])]])
+  st.write(y)
+#st.write(y.values.tolist())
