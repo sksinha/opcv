@@ -1,3 +1,4 @@
+import streamlit.components.v1 as components
 import streamlit as st
 from PIL import Image
 import numpy as np
@@ -10,7 +11,7 @@ from streamlit_bokeh_events import streamlit_bokeh_events
 
 html_temp = """
 <div style="background-color:tomato;padding:1.5px">
-<h1 style="color:white;text-align:center;">Attendance web App </h1>
+<h1 style="color:white;text-align:center;">Attendance Web App </h1>
 </div><br>
 
 <script>
@@ -28,6 +29,7 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 </script>"""
+components.html(html_temp)
 st.markdown(html_temp,unsafe_allow_html=True)
 st.title('National Informatics Centre')
 st.markdown('<style>h1{color: red;}</style>', unsafe_allow_html=True)
