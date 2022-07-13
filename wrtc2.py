@@ -32,7 +32,7 @@ st.markdown(html_temp,unsafe_allow_html=True)
 st.title('This is for a good design')
 st.markdown('<style>h1{color: red;}</style>', unsafe_allow_html=True)
 
-st.write('position.coords.latitude')
+st.write('position')
 
 
 img_file_buffer = st.camera_input("Take a picture")
