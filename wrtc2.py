@@ -1,3 +1,29 @@
+html_temp = """
+<div style="background-color:tomato;padding:1.5px">
+<h1 style="color:white;text-align:center;">Demo Web App </h1>
+</div><br>
+
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>"""
+
+st.markdown(html_temp,unsafe_allow_html=True)
+st.title('This is for a good design')
+st.markdown('<style>h1{color: red;}</style>', unsafe_allow_html=True)
+
+
 from geopy.geocoders import Nominatim
 geolocator = Nominatim(user_agent="geoapiExercises")
 from bokeh.models.widgets import Button
@@ -27,27 +53,5 @@ if img_file_buffer is not None:
     st.write(img_array.shape)
     
 #########################
-
-
-loc_button = Button(label="Get Location")
-loc_button.js_on_event("button_click", CustomJS(code="""
-    navigator.geolocation.getCurrentPosition(
-        (loc) => {
-            document.dispatchEvent(new CustomEvent("GET_LOCATION", {detail: {lat: loc.coords.latitude, lon: loc.coords.longitude}}))
-        }
-    )
-    """))
-result = streamlit_bokeh_events(
-    loc_button,
-    events="GET_LOCATION",
-    key="get_location",
-    refresh_on_update=False,
-    override_height=75,
-    debounce_time=0)
-
-if result:
-    if "GET_LOCATION" in result:
-        st.write(result.get("GET_LOCATION"))
-
-        
+       
 ###########################
