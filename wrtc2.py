@@ -1,3 +1,15 @@
+from geopy.geocoders import Nominatim
+geolocator = Nominatim(user_agent="geoapiExercises")
+from bokeh.models.widgets import Button
+from bokeh.models import CustomJS
+from streamlit_bokeh_events import streamlit_bokeh_events
+
+
+import streamlit as st
+from PIL import Image
+import numpy as np
+
+
 html_temp = """
 <div style="background-color:tomato;padding:1.5px">
 <h1 style="color:white;text-align:center;">Demo Web App </h1>
@@ -18,22 +30,12 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 </script>"""
-
 st.markdown(html_temp,unsafe_allow_html=True)
 st.title('This is for a good design')
 st.markdown('<style>h1{color: red;}</style>', unsafe_allow_html=True)
 
 
-from geopy.geocoders import Nominatim
-geolocator = Nominatim(user_agent="geoapiExercises")
-from bokeh.models.widgets import Button
-from bokeh.models import CustomJS
-from streamlit_bokeh_events import streamlit_bokeh_events
 
-
-import streamlit as st
-from PIL import Image
-import numpy as np
 
 img_file_buffer = st.camera_input("Take a picture")
 
