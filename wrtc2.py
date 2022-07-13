@@ -10,7 +10,7 @@ from streamlit_bokeh_events import streamlit_bokeh_events
 
 html_temp = """
 <div style="background-color:tomato;padding:1.5px">
-<h1 style="color:white;text-align:center;">Demo Web App </h1>
+<h1 style="color:white;text-align:center;">Attendance web App </h1>
 </div><br>
 
 <script>
@@ -32,7 +32,7 @@ st.markdown(html_temp,unsafe_allow_html=True)
 st.title('This is for a good design')
 st.markdown('<style>h1{color: red;}</style>', unsafe_allow_html=True)
 
-
+st.write('position.coords.latitude')
 
 
 img_file_buffer = st.camera_input("Take a picture")
