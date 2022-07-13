@@ -1,13 +1,11 @@
+import streamlit as st
+from PIL import Image
+import numpy as np
 from geopy.geocoders import Nominatim
 geolocator = Nominatim(user_agent="geoapiExercises")
 from bokeh.models.widgets import Button
 from bokeh.models import CustomJS
 from streamlit_bokeh_events import streamlit_bokeh_events
-
-
-import streamlit as st
-from PIL import Image
-import numpy as np
 
 
 html_temp = """
