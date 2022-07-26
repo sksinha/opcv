@@ -3,3 +3,4 @@ bokeh
 streamlit_bokeh_events
 geopy
 geocoder
+streamlit_elements
