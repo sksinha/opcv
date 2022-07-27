@@ -47,12 +47,4 @@ with elements("multiple_children"):
     #     Hello world
     #   </Typography>
     # </Button>
-with mui.Button:
-        mui.icon.EmojiPeople()
-        mui.icon.DoubleArrow()
-        mui.Typography("Button with multiple children")
-with mui.Button:
-        mui.icon.EmojiPeople()
-        mui.icon.DoubleArrow()
-        mui.Typography("Button with multiple children")
-        
+
