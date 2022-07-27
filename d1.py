@@ -19,9 +19,8 @@ with elements("new_element"):
     # <Typography>
     #   Hello world
     # </Typography>
-
-    mui.Typography("Hello world")
-    with elements("multiple_children"):
+        mui.Typography("Hello world")
+with elements("multiple_children"):
 
     # You have access to Material UI icons using: mui.icon.IconNameHere
     #
@@ -33,7 +32,7 @@ with elements("new_element"):
     #   Hello world
     # </Button>
 
-    mui.Button(
+        mui.Button(
         mui.icon.EmojiPeople,
         mui.icon.DoubleArrow,
         "Button with multiple children"
@@ -48,12 +47,11 @@ with elements("new_element"):
     #     Hello world
     #   </Typography>
     # </Button>
-
-    with mui.Button:
+with mui.Button:
         mui.icon.EmojiPeople()
         mui.icon.DoubleArrow()
         mui.Typography("Button with multiple children")
-  with elements("multiple_children"):
+with elements("multiple_children"):
 
     # You have access to Material UI icons using: mui.icon.IconNameHere
     #
@@ -81,7 +79,7 @@ with elements("new_element"):
     #   </Typography>
     # </Button>
 
-    with mui.Button:
+with mui.Button:
         mui.icon.EmojiPeople()
         mui.icon.DoubleArrow()
         mui.Typography("Button with multiple children")
