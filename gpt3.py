@@ -1,8 +1,8 @@
 import os
 import openai
-from streamlit_card import card
+from streamlit-card import card
 import json
-from streamlit_card import card
+from streamlit-card import card
 import streamlit as st
 import streamlit.components.v1 as components
 import requests
