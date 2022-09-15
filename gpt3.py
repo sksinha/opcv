@@ -8,3 +8,4 @@ import numpy as np
 
 from io import BytesIO
 from time import sleep
+assembly_auth_key = "AssemblyAI-Auth-Key"
